@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--style-->
+    <link rel="stylesheet" href="style.css" />
+    <title>Relatório Consolidado</title>
+  </head>
+  <body>
+    <header>
+      <img src="imgs/arrow-left.svg" class="arrow-return" />
+    </header>
+    <div class="content">
+      <section class="pageheader">
+        <nav class="breadcrumb">
+          <ol>
+            <li>
+              <a href="">Relatórios</a>
+              <span class="breadcrumb-separator">/</span>
+            </li>
+            <li>
+              <a href="">Fechamento Financeiro</a>
+              <span class="breadcrumb-separator">/</span>
+            </li>
+            <li>
+              <a href="">Relatório Consolidado</a>
+            </li>
+          </ol>
+        </nav>
+        <div class="pageheader-title">
+          <span>Relatório Consolidado</span>
+        </div>
+      </section>
+      <section class="table-relatorios">
+        <!-- Button trigger modal -->
+        <div class="btn-modal-columns" id="btn-modal">
+          <button class="btn-exibir-colunas" onclick="openModal()">
+            <img src="imgs/check-square.svg" />Exibição de colunas
+          </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Exibição de colunas</h3>
+              <button type="button" class="btn-close" onclick="closeModal()">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer">
+              <button type="button" class="btns btn-select" id="btnSelectNone">
+                <img src="imgs/square.svg" />Nenhum
+              </button>
+              <button type="button" class="btns btn-select" id="btnSelectAll">
+                <img src="imgs/check-square.svg" />Todos
+              </button>
+              <button type="button" class="btns btn-save" id="btnSave">
+                <img src="imgs/save.svg" />Aplicar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="box-table" >
+          <table cellspacing="0" cellpadding="0" class="table">
+            <thead>
+              <tr id="tableHeaderRow" ></tr>
+            </thead>
+            <tbody id="tableBody" >
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>
+        Copyright ©
+        <a href="https://www.madeiramadeira.com.br/seguranca" target="blank"
+          >madeiramadeira</a
+        >. Todos os direitos reservados!
+      </p>
+      <p>
+        Versão 1.47.8 / memory_limit 128M / upload_max_filesize 1024M /
+        post_max_size 1024M
+      </p>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
